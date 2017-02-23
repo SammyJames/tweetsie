@@ -2,15 +2,19 @@ use gtk;
 use gtk::prelude::*;
 use gtk::{Builder, Window, Box};
 
-use TweetStream;
+use view::login_window::LoginWindow;
 
-pub struct MainWindow {
-    root: Window,
+use TweetStream;
+use model::TweetsieModel;
+
+pub struct MainWindow<'a> {
+    pub root: Window,
     columns: Box,
+    model: &'a TweetsieModel,
 }
 
-impl MainWindow {
-    pub fn new() -> MainWindow {
+impl<'a> MainWindow<'a> {
+    pub fn new(model: &'a TweetsieModel) -> MainWindow {
         let window_src = include_str!("../../res/root.glade");
         let builder = Builder::new_from_string(window_src);
 
@@ -25,6 +29,7 @@ impl MainWindow {
         MainWindow {
             root: root,
             columns: cols,
+            model: model,
         }
     }
 
@@ -38,5 +43,10 @@ impl MainWindow {
 
     pub fn add_stream(&mut self, new_stream: TweetStream) {
         self.columns.add(&new_stream.root);
+    }
+
+    pub fn login(&mut self) {
+        let mut window = LoginWindow::new(&self);
+        window.show();
     }
 }

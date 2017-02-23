@@ -25,6 +25,22 @@ impl LocalUser {
 			user: User::new(),
 		}
 	}
+
+	pub fn get_consumer_key(&self) -> &String {
+		&self.consumer_key
+	}
+
+	pub fn get_consumer_secret(&self) -> &String {
+		&self.consumer_secret
+	}
+
+	pub fn get_token(&self) -> &String {
+		&self.token
+	}
+
+	pub fn get_token_secret(&self) -> &String {
+		&self.token_secret
+	}
 }
 
 impl TwitterUser for LocalUser {

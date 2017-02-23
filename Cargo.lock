@@ -2,6 +2,7 @@
 name = "tweetsie"
 version = "0.1.0"
 dependencies = [
+ "futures 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
  "gtk 0.1.1 (git+https://github.com/gtk-rs/gtk.git)",
  "twitter-stream 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]

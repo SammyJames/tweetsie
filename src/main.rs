@@ -1,5 +1,6 @@
 extern crate twitter_stream as twitter;
 extern crate gtk;
+extern crate futures;
 
 mod view;
 mod model;
@@ -8,8 +9,7 @@ use view::main_window::MainWindow;
 use view::tweet_stream::TweetStream;
 use view::tweet::Tweet;
 
-use model::user::User;
-use model::local_user::LocalUser;
+use model::TweetsieModel;
 
 fn main() {
     if gtk::init().is_err() {
@@ -17,10 +17,14 @@ fn main() {
         return;
     }
 
-    let mut local_user = LocalUser::new();
+    let model = TweetsieModel::new();
 
-    let mut window = MainWindow::new();
+    let mut window = MainWindow::new(&model);
     window.show();
+
+    if !model.is_logged_in() {
+        window.login();    
+    }
 
     for _ in 0..3 {
         let mut test_stream = TweetStream::new();

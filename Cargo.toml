@@ -5,6 +5,7 @@ authors = ["Sammy James"]
 
 [dependencies]
 twitter-stream = "0.1"
+futures = "0.1.9"
 
 
 [dependencies.gtk]
