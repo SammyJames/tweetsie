@@ -2,8 +2,8 @@
 
 use std::string::String;
 
-use control::user::TwitterUser;
-use control::user::User;
+use model::user::TwitterUser;
+use model::user::User;
 
 #[derive(Debug)]
 pub struct LocalUser {
