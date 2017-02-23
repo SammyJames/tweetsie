@@ -1,6 +1,6 @@
 use gtk;
 use gtk::prelude::*;
-use gtk::{Builder, Window, Button, Box};
+use gtk::{Builder, Window, Box};
 
 use TweetStream;
 

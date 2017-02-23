@@ -1,6 +1,5 @@
-use gtk;
 use gtk::prelude::*;
-use gtk::{Builder, Window, Button, Box, ListBox, ScrolledWindow};
+use gtk::{Builder, Box, ScrolledWindow};
 
 use Tweet;
 

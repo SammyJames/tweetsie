@@ -1,6 +1,5 @@
-use gtk;
-use gtk::prelude::*;
-use gtk::{Builder, Window, Button, Box, ListBox, Label, Image};
+
+use gtk::{Builder, Box, Label, Image};
 
 pub struct Tweet {
     pub root: Box,
