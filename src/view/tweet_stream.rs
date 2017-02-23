@@ -1,7 +1,7 @@
 use gtk::prelude::*;
 use gtk::{Builder, Box, ScrolledWindow};
 
-use Tweet;
+use view::tweet::Tweet;
 
 pub struct TweetStream {
     pub root: ScrolledWindow,
@@ -11,7 +11,7 @@ pub struct TweetStream {
 impl TweetStream {
     pub fn new() -> TweetStream {
 
-        let stream_src = include_str!("../res/stream.glade");
+        let stream_src = include_str!("../../res/stream.glade");
         let builder = Builder::new_from_string(stream_src);
 
         let root: ScrolledWindow = builder.get_object("Root").unwrap();

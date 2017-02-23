@@ -11,7 +11,7 @@ pub struct MainWindow {
 
 impl MainWindow {
     pub fn new() -> MainWindow {
-        let window_src = include_str!("../res/root.glade");
+        let window_src = include_str!("../../res/root.glade");
         let builder = Builder::new_from_string(window_src);
 
         let root: Window = builder.get_object("Root").unwrap();

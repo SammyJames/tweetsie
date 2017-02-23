@@ -1,20 +1,15 @@
 extern crate twitter_stream as twitter;
 extern crate gtk;
 
-mod main_window;
-use main_window::MainWindow;
+mod view;
+mod control;
 
-mod tweet_stream;
-use tweet_stream::TweetStream;
+use view::main_window::MainWindow;
+use view::tweet_stream::TweetStream;
+use view::tweet::Tweet;
 
-mod tweet;
-use tweet::Tweet;
-
-mod user;
-use user::User;
-
-mod local_user;
-use local_user::LocalUser;
+use control::user::User;
+use control::local_user::LocalUser;
 
 fn main() {
     if gtk::init().is_err() {

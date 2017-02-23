@@ -11,7 +11,7 @@ pub struct Tweet {
 
 impl Tweet {
     pub fn new() -> Tweet {
-        let tweet_src = include_str!("../res/tweet.glade");
+        let tweet_src = include_str!("../../res/tweet.glade");
         let builder = Builder::new_from_string(tweet_src);
 
         let root: Box = builder.get_object("Root").unwrap();
