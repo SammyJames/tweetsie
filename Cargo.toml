@@ -1,0 +1,11 @@
+[package]
+name = "tweetsie"
+version = "0.1.0"
+authors = ["samantha"]
+
+[dependencies]
+twitter-api = "*"
+
+[dependencies.gtk]
+git = "https://github.com/gtk-rs/gtk.git"
+features = ["v3_16"]
