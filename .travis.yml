@@ -8,3 +8,6 @@ branches:
 notifications:
   email:
     - sammy.morgan.james+github@gmail.com
+script:
+  - |
+      cargo build --verbose
