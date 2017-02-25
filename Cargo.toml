@@ -5,10 +5,19 @@ authors = ["Sammy James"]
 
 [dependencies]
 hyper = "0.10"
+hyper-native-tls = "0.2.2"
 futures = "0.1.9"
+rand = "0.3"
+rustc-serialize = "^0.3"
 secstr = "*"
 lazy_static = "*"
+url = "*"
+time = "*"
+regex = "*"
 
 [dependencies.gtk]
 git = "https://github.com/gtk-rs/gtk.git"
 features = ["v3_16"]
+
+[dependencies.rust-crypto]
+git = "https://github.com/DaGenix/rust-crypto"

@@ -1,17 +1,25 @@
 extern crate gtk;
 extern crate futures;
 extern crate secstr;
+extern crate crypto;
+extern crate rand;
+extern crate rustc_serialize;
+extern crate url;
+extern crate time;
+extern crate regex;
 
 #[macro_use] 
 extern crate hyper;
+extern crate hyper_native_tls;
 
 #[macro_use]
 extern crate lazy_static;
 
-
 mod view;
 mod model;
 mod constants;
+mod auth;
+mod util;
 
 use view::main_window::MainWindow;
 use view::tweet_stream::TweetStream;
@@ -28,6 +36,10 @@ fn main() {
 
     let mut window = MainWindow::new(&model);
     window.show();
+
+    let auth_util = auth::PinAuth::new();
+    //auth_util.authenticate();
+    auth_util.get_request_token();
 
     if !model.is_logged_in() {
         window.login();    
