@@ -13,3 +13,5 @@
 res/secret
 
 *.glade~
+
+res/key
