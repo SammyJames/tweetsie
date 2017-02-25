@@ -1,3 +1,10 @@
 language: rust
+sudo: false
 rust:
   - nightly
+branches:
+  only:
+    - master
+notifications:
+  email:
+    - sammy.morgan.james+github@gmail.com
