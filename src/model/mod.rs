@@ -11,14 +11,12 @@ pub struct TweetsieModel {
 }
 
 impl TweetsieModel {
-	pub fn new() -> TweetsieModel {
+    pub fn new() -> TweetsieModel {
 
-		TweetsieModel {
-			local_user: LocalUser::new(),
-		}
-	}
+        TweetsieModel { local_user: LocalUser::new() }
+    }
 
-	pub fn is_logged_in<'a>(&'a self) -> bool {
-		false
-	}
+    pub fn is_logged_in<'a>(&'a self) -> bool {
+        false
+    }
 }

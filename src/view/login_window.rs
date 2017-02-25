@@ -27,6 +27,6 @@ impl LoginWindow {
 
 
     pub fn show(&mut self) {
-    	self.root.present();
+        self.root.present();
     }
 }

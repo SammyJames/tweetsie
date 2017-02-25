@@ -7,9 +7,7 @@ pub struct Tweet {
 }
 
 impl Tweet {
-	pub fn new(user: User) -> Tweet {
-		Tweet {
-			user: user,
-		}
-	}
+    pub fn new(user: User) -> Tweet {
+        Tweet { user: user }
+    }
 }
