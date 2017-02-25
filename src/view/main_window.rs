@@ -2,9 +2,9 @@ use gtk;
 use gtk::prelude::*;
 use gtk::{Builder, Window, Box};
 
-use view::login_window::LoginWindow;
+use view::LoginWindowView;
+use view::TweetStreamView;
 
-use TweetStream;
 use model::TweetsieModel;
 
 pub struct MainWindow<'a> {
@@ -37,16 +37,12 @@ impl<'a> MainWindow<'a> {
         self.root.show_all();
     }
 
-    pub fn hide(&mut self) {
-        unimplemented!();
-    }
-
-    pub fn add_stream(&mut self, new_stream: TweetStream) {
+    pub fn add_stream(&mut self, new_stream: TweetStreamView) {
         self.columns.add(&new_stream.root);
     }
 
     pub fn login(&mut self) {
-        let mut window = LoginWindow::new(&self);
+        let mut window = LoginWindowView::new(&self);
         window.show();
     }
 }

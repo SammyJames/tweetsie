@@ -4,9 +4,10 @@ version = "0.1.0"
 authors = ["Sammy James"]
 
 [dependencies]
-twitter-stream = "0.1"
+hyper = "0.10"
 futures = "0.1.9"
-
+secstr = "*"
+lazy_static = "*"
 
 [dependencies.gtk]
 git = "https://github.com/gtk-rs/gtk.git"

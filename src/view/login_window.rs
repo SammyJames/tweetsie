@@ -2,7 +2,7 @@ use gtk;
 use gtk::prelude::*;
 use gtk::{Builder, Window};
 
-use view::main_window::MainWindow;
+use view::MainWindowView;
 
 #[derive(Debug)]
 pub struct LoginWindow {
@@ -10,7 +10,7 @@ pub struct LoginWindow {
 }
 
 impl LoginWindow {
-    pub fn new(window: &MainWindow) -> LoginWindow {
+    pub fn new(window: &MainWindowView) -> LoginWindow {
         let window_src = include_str!("../../res/login.glade");
         let builder = Builder::new_from_string(window_src);
 
