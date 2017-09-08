@@ -9,11 +9,11 @@ branches:
 
 notifications:
   email:
-    - sammy.morgan.james+github@gmail.com
+    - sammy.james@protonmail.com
 
 before_script:
   - sudo apt-get update -qq
-  - sudo apt-get install libgtk-3-dev -y
+  - sudo apt-get install libgtk-3-dev libglib2.0-dev -y
 
 script:
   - cargo build --verbose
